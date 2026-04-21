@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Precision Navigator - Học Lái Xe Vững Tương Lai</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e2e2e2",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "on-surface-variant": "#5c403c",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary-container": "#fbfdff",
+                    "on-primary-fixed-variant": "#930004",
+                    "tertiary-fixed": "#bfe8ff",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary-container": "#fffbff",
+                    "on-surface": "#1a1c1c",
+                    "surface-container": "#eeeeee",
+                    "on-background": "#1a1c1c",
+                    "outline-variant": "#e5beb8",
+                    "background": "#f9f9f9",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#007ea4",
+                    "primary-container": "#db3327",
+                    "on-secondary-container": "#636262",
+                    "on-primary-fixed": "#410001",
+                    "surface-dim": "#dadada",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-tint": "#bb1913",
+                    "primary": "#b71511",
+                    "tertiary": "#006482",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-fixed-variant": "#004d65",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#72d2fd",
+                    "on-tertiary-fixed": "#001f2b",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#474746",
+                    "outline": "#906f6b",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "secondary-fixed": "#e5e2e1",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed": "#ffdad5",
+                    "inverse-primary": "#ffb4a9",
+                    "secondary-container": "#e2dfde"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+        .red-gradient { background: linear-gradient(135deg, #b71511 0%, #db3327 100%); }
+        .text-editorial { letter-spacing: -0.02em; }
+    html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="sticky top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(26,28,28,0.06)] h-16 md:h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full gap-3">
+<a class="text-sm sm:text-base md:text-xl font-black text-zinc-900 dark:text-zinc-50 tracking-tighter leading-tight" href="#">
+                THE PRECISION NAVIGATOR
+            </a>
+<div class="hidden md:flex items-center gap-8"><a class="text-[#b71511] font-bold border-b-2 border-[#b71511] pb-1 font-['Be_Vietnam_Pro'] tracking-tight" href="#about">Về chúng tôi</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#courses-section">Khóa học</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#advantages">Ưu điểm</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#process">Quy trình</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#testimonials">Cảm nhận</a></div>
+<div class="hidden sm:block">
+<button class="red-gradient text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm md:text-base active:scale-95 transition-transform duration-200 whitespace-nowrap" onclick="window.location.href='#registration-form'">
+                Đăng ký ngay
+            </button>
+</div>
+<button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-zinc-200 text-zinc-800" id="mobile-menu-btn" type="button">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</div>
+<div class="hidden md:hidden border-t border-zinc-200/80 bg-white/95 backdrop-blur" id="mobile-menu">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3">
+<a class="text-zinc-800 font-semibold" href="#about">Về chúng tôi</a>
+<a class="text-zinc-800 font-semibold" href="#courses-section">Khóa học</a>
+<a class="text-zinc-800 font-semibold" href="#advantages">Ưu điểm</a>
+<a class="text-zinc-800 font-semibold" href="#process">Quy trình</a>
+<a class="text-zinc-800 font-semibold" href="#testimonials">Cảm nhận</a>
+<button class="red-gradient text-white px-5 py-2.5 rounded-full font-bold w-full mt-1" onclick="window.location.href='#registration-form'" type="button">Đăng ký ngay</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[80vh] md:min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-90" data-alt="luxury car interior dashboard with focus on steering wheel and highway road ahead during soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQFTF2AK8xKF0qd3IICI21CyrhjUrQFE5srsOhkBiAhUwdDuSt8GzurML8G4YRv2acgTPSSz0_QQanAd-9IzZAgJ9Ijyr9W-MX2D5jwfb3gskssP_aB5QiywqKkSM4-h6Ze-LGDRmcpc3bGTcmCKzsJn3k3L45inzeD0lX4tZwauAAPK3zAckamo-FMDpJAOPq6z_5WnxufZQ1yfPO9Ap1xGy9omoDbgIwjXjvcZ6yjyyxeI4lMVT_8L7pBYC1om3JYlOA6HZ6r8l"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/80 via-on-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-0">
+<div class="">
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white text-editorial leading-[1.15] mb-6 md:mb-8">
+                    Học Lái Xe<br/><span class="text-primary-fixed inline-block mt-1 sm:mt-2">Vững Tương Lai</span>
+</h1>
+<p class="text-base md:text-lg text-white/80 font-medium mb-8 md:mb-10 leading-relaxed max-w-2xl">
+                    Làm chủ vô lăng với quy trình đào tạo chuẩn quốc tế. Chúng tôi không chỉ dạy bạn lái xe, chúng tôi đào tạo những người Navigator thực thụ.
+                </p>
+<div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-start">
+<a class="red-gradient text-white px-6 sm:px-10 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg active:scale-95 transition-all inline-block text-center w-full sm:w-auto" href="#registration-form">Đăng ký tư vấn</a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 sm:px-10 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/20 transition-all inline-block text-center w-full sm:w-auto" href="#courses-section">Xem các khóa học</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Statistics Bento Grid -->
+<section class="py-16 md:py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 md:p-10 rounded-2xl shadow-sm group hover:shadow-xl transition-all duration-500 flex flex-col justify-between min-h-56 md:h-64 border-l-4 border-primary">
+<div class="text-5xl font-black text-on-surface text-editorial">5000+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Học viên tin tưởng</h3>
+<p class="text-on-surface-variant leading-relaxed">Cộng đồng học viên trải dài khắp cả nước, đánh giá 5 sao cho chất lượng đào tạo.</p>
+</div>
+</div>
+<div class="red-gradient p-6 md:p-10 rounded-2xl shadow-sm flex flex-col justify-between min-h-56 md:h-64 text-white">
+<div class="text-5xl font-black text-editorial">98%</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Tỉ lệ đậu sát hạch</h3>
+<p class="text-white/80 leading-relaxed">Quy trình đào tạo tối ưu giúp học viên tự tin vượt qua mọi kỳ thi ngay lần đầu.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 md:p-10 rounded-2xl shadow-sm group hover:shadow-xl transition-all duration-500 flex flex-col justify-between min-h-56 md:h-64 border-l-4 border-primary">
+<div class="text-5xl font-black text-on-surface text-editorial">10+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Năm kinh nghiệm</h3>
+<p class="text-on-surface-variant leading-relaxed">Khẳng định vị thế dẫn đầu trong lĩnh vực đào tạo và sát hạch lái xe chuyên nghiệp.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Introduction Section (Asymmetric Layout) -->
+<section class="py-16 md:py-24 bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2 relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/5] object-cover" data-alt="professional driving instructor explaining dashboard controls to a student inside a modern car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNqiaZ5kvHwAXEqPx_JT0W6mJTc-IhBDINi2P3teY1AO6GcptEEG5iC1QKBRZZxNgpl7xaiQx8Wnsc4c9eVTuk6k7Rr6UpXZ6fKKeGDzJhtv96KoOMYiiDgxweFr0JBmWyDAAa6sQoSj_HboyofB1h3HLWl5BGLl4D4-l2SfcdeoEOIJfEc8BALYSxzFjEYzveu10mzw8lZO28MSVi9X0LCeqJgJACK7NkE3bY4PdDwK-zNmXU0lULVerf8wMhTrAIscOxWoKQJz1m"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl max-w-[240px]">
+<p class="italic text-on-surface-variant font-medium">"Sứ mệnh của chúng tôi là tạo ra những hành trình an toàn cho mọi gia đình."</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<span class="font-bold text-sm">Giám Đốc Đào Tạo</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface mb-8 leading-[1.2] tracking-normal">
+                        Kiến Tạo Những <span class="text-primary">Chuyên Gia</span> Đường Phố
+                    </h2>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Tại The Precision Navigator, chúng tôi không chỉ dừng lại ở việc giúp học viên có được tấm bằng lái. Sứ mệnh cốt lõi là trang bị tư duy lái xe an toàn, khả năng xử lý tình huống linh hoạt và sự tự tin tuyệt đối sau tay lái.
+                    </p>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Với đội ngũ giáo viên trên 10 năm kinh nghiệm và hệ thống sân tập đạt chuẩn ISO, chúng tôi cam kết mang lại trải nghiệm học tập cao cấp, xứng tầm với sự đầu tư của bạn.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold">Đào tạo chuẩn quốc tế</h4>
+<p class="text-sm text-on-surface-variant">Giáo trình cập nhật liên tục theo xu hướng an toàn mới nhất.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold">Hỗ trợ trọn đời</h4>
+<p class="text-sm text-on-surface-variant">Tư vấn kỹ thuật và kỹ năng lái xe ngay cả sau khi tốt nghiệp.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Cards -->
+<section class="py-16 md:py-24 bg-surface" id="courses-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 md:mb-16">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface text-editorial mb-4">Các Khóa Học Chiến Lược</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Lựa chọn lộ trình phù hợp để bắt đầu hành trình chinh phục mọi cung đường.</p>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+<!-- Course Card B1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="modern automatic transmission interior of a luxury sedan during daytime" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSP-ynMqUz1qZfFwN4f3zu587GqqC9aTX77v-TeOMw_eXjcQBsdTOOK4EmqInAgGrHEC7folC_t5AmmYOxrsDl9lRhvXGKfI6hS1AFnBs1MmNwcANmV_N5jnwcifSN0FcilVWVJfJ7R6NWGANwVLGUEHhRKfPu_8HAtzD88xmc9QMMFWGdWXeC-sdJ-_ybjHM3gf3_r8I3632p1ATa-R_gvoMQ4mQC9t8eULdLDnRQlpQEBogvKuoZRo4Yrb65ioFdOmMfbHcgMTJM"/>
+<div class="absolute top-4 right-4 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Phổ biến</div>
+</div>
+<div class="p-6 md:p-8">
+<h3 class="text-2xl font-black mb-2">Hạng B1 (Số tự động)</h3>
+<p class="text-on-surface-variant text-sm mb-6">Dành cho cá nhân lái xe gia đình, đơn giản và dễ làm chủ.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Thời gian:</span>
+<span class="font-bold">3 tháng</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Học phí:</span>
+<span class="font-bold text-primary">12.500.000đ</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Xe tập:</span>
+<span class="font-bold">Vios / City 2023</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl bg-surface-container-highest font-bold hover:bg-primary hover:text-white transition-colors">
+                        Chi tiết khóa học
+                    </button>
+</div>
+</div>
+<!-- Course Card B2 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group border-2 border-primary/20">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="manual gear shifter in a sports car with selective focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqUjKp6-U989J_CpYomrsyRbcdjrmlk3ZIk6jQl6ozJ0FrnneFq1WjZWCv7myuWY1uBYSYzzuMWSU0qC4iNW3cfzDfVasYJ6H1Xa1DvR_ug1ndET6jc2d_LLgYvFTtX0-gjCUzgkbFy6qCLTRby1KR9JvfU1o-Wjja5NYW5GvU7Yh7xyu8VoY-Lbc81r_u5m033EWtILVJJIpo8mgVvqc9ppwlOdTLapxQD6qL4UaRP07P6QA6qZGeFDHv_K675ivzRMkw0VWcl_K_"/>
+<div class="absolute top-4 right-4 bg-on-surface text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Kinh doanh</div>
+</div>
+<div class="p-6 md:p-8">
+<h3 class="text-2xl font-black mb-2">Hạng B2 (Số sàn)</h3>
+<p class="text-on-surface-variant text-sm mb-6">Phù hợp cho cả lái xe gia đình và kinh doanh vận tải chuyên nghiệp.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Thời gian:</span>
+<span class="font-bold">3.5 tháng</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Học phí:</span>
+<span class="font-bold text-primary">14.000.000đ</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Xe tập:</span>
+<span class="font-bold">Innova / Vios 2023</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl red-gradient text-white font-bold shadow-md active:scale-95 transition-all">
+                        Đăng ký ngay
+                    </button>
+</div>
+</div>
+<!-- Course Card C -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="large logistics truck on a highway at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8o1SYSwMngozgYN-gAZgIk3mEyn386wXMQDQVUX5qIw-ALTUdWlEuFRr3WdwIae37vmMGzlPJRuZNy5mTMjqjcwdCH7jKXL2oPQ0YsUp2AFoo9DI2vBO6QnBSEsNlbEZT3P1784oN3jmEIfB4TOBK9Ewx5g3iNa9UyJBBk5oM-d_v3jf-sNzH9lrFAp6pNhH112z3LssY0NQZr0WHiGhz2t40KfYVR1jVTXKTSr_muYjIGBCbyf1GXWjZmQ-J2GURRNtNQyB95pJG"/>
+<div class="absolute top-4 right-4 bg-zinc-400 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Tải nặng</div>
+</div>
+<div class="p-6 md:p-8">
+<h3 class="text-2xl font-black mb-2">Hạng C (Xe tải)</h3>
+<p class="text-on-surface-variant text-sm mb-6">Đào tạo lái xe tải chuyên nghiệp, mở rộng cơ hội nghề nghiệp.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Thời gian:</span>
+<span class="font-bold">6 tháng</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Học phí:</span>
+<span class="font-bold text-primary">18.000.000đ</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Xe tập:</span>
+<span class="font-bold">Xe tải 3.5 tấn+</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl bg-surface-container-highest font-bold hover:bg-primary hover:text-white transition-colors">
+                        Chi tiết khóa học
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Advantages Section (Icon Grid) -->
+<section class="py-16 md:py-24 bg-surface-container-low" id="advantages">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="text-center md:text-left">
+<div class="w-16 h-16 red-gradient rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-lg">
+<span class="material-symbols-outlined text-3xl">directions_car</span>
+</div>
+<h3 class="text-xl font-black mb-3">Xe đời mới 100%</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Học viên được thực hành trên các dòng xe đời mới từ 2022-2023, đầy đủ tiện nghi và an toàn.</p>
+</div>
+<div class="text-center md:text-left">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary mb-6 mx-auto md:mx-0 shadow-sm border border-primary/10">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h3 class="text-xl font-black mb-3">Giáo viên tận tâm</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Đội ngũ thầy dạy có chứng chỉ sư phạm, phương pháp sư phạm dễ hiểu, không quát mắng.</p>
+</div>
+<div class="text-center md:text-left">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary mb-6 mx-auto md:mx-0 shadow-sm border border-primary/10">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<h3 class="text-xl font-black mb-3">Sân tập chuẩn ISO</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sân tập rộng rãi, mô phỏng chính xác các bài thi sát hạch với hệ thống cảm biến hiện đại.</p>
+</div>
+<div class="text-center md:text-left">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary mb-6 mx-auto md:mx-0 shadow-sm border border-primary/10">
+<span class="material-symbols-outlined text-3xl">event_available</span>
+</div>
+<h3 class="text-xl font-black mb-3">Lịch học linh hoạt</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Học viên tự chọn giờ học (Sáng/Chiều/Tối) kể cả Thứ 7 và Chủ Nhật không thu thêm phí.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Training Process -->
+<section class="py-16 md:py-24 bg-surface overflow-hidden" id="process">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface text-editorial text-center mb-20">Lộ Trình Thành Công</h2>
+<div class="relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container-high -translate-y-1/2 hidden lg:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="relative z-10 text-center group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-surface group-hover:border-primary transition-colors">
+<span class="text-xl font-black">01</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Đăng ký &amp; Hồ sơ</h4>
+<p class="text-sm text-on-surface-variant">Thủ tục nhanh gọn trong 15 phút, hỗ trợ thu hồ sơ tại nhà.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 text-center group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-surface group-hover:border-primary transition-colors">
+<span class="text-xl font-black">02</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Lý thuyết &amp; Mô phỏng</h4>
+<p class="text-sm text-on-surface-variant">Học mẹo lý thuyết 600 câu dễ nhớ, thực hành cabin mô phỏng 3D.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 text-center group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-surface group-hover:border-primary transition-colors">
+<span class="text-xl font-black">03</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Thực hành sa hình</h4>
+<p class="text-sm text-on-surface-variant">1 kèm 1 với giáo viên, thực hành nhuần nhuyễn 11 bài thi sa hình.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 text-center group">
+<div class="w-16 h-16 red-gradient text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-surface">
+<span class="material-symbols-outlined">emoji_events</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Sát hạch &amp; Nhận bằng</h4>
+<p class="text-sm text-on-surface-variant">Tự tin thi đậu và nhận bằng lái xe sau 10-15 ngày làm việc.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 md:py-24 bg-on-surface text-white" id="testimonials">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+<div>
+<h2 class="text-4xl md:text-5xl font-black text-editorial">Cảm Nhận Từ <br/><span class="text-primary-fixed">Các Học Viên</span></h2>
+</div>
+<p class="text-white/60 max-w-sm mb-2">Hơn 5000+ học viên đã thay đổi tư duy lái xe sau khóa học của chúng tôi.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white/5 p-6 md:p-10 rounded-3xl backdrop-blur-sm border border-white/10">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic leading-relaxed mb-8">"Lúc đầu tôi rất sợ lái xe, nhưng thầy giáo ở trung tâm cực kỳ kiên nhẫn. Xe tập đời mới Vios rất sạch sẽ và dễ lái. Tôi đã thi đậu ngay lần đầu với điểm tuyệt đối!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-zinc-700">
+<img class="w-full h-full object-cover" data-alt="portrait of a young woman smiling confidently" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9yZRxoR2jiiZeSPIbztfBFrNOAS-BEmCfBYq_4yFhui2Dw8RG_8EIwreqFNA1-ltHlhmKe4UPCoeFNSozCdEcGLXOd4HcSg7tw1EOJNXrcCO8Ear1rRPfZYQlHO-2v1KsM2nt68sTX5yZ_5XhuLw2LR9tc2TOsWBsB-lEWejXlgvE4FTQtM3Q_XGMK63x6N85EUmbZqZQQE-hY_FTPnSv6Cip61liLC6QhQ4jDi_f7BjZwXEjbq8SE1FUeDrup9EjWJuQ_s8Wzj9j"/>
+</div>
+<div>
+<p class="font-bold">Trần Thu Hương</p>
+<p class="text-xs text-white/40">Học viên khóa B1 - T08/2023</p>
+</div>
+</div>
+</div>
+<div class="bg-white/5 p-6 md:p-10 rounded-3xl backdrop-blur-sm border border-white/10">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic leading-relaxed mb-8">"Quy trình đào tạo rất chuyên nghiệp, từ việc hỗ trợ làm hồ sơ đến khi đi thi. Sân tập rộng và giống hệt sân thi sát hạch nên khi đi thi tôi không hề bị tâm lý."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-zinc-700">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA95gsvKVee9wKOLo9PCf4O5yZKTULeWX31Q4_z72j4FhG1zVPZNxY-zFR3E52GGhp5_393urpXy9IEpyVFnudvGGH02ZrG-YCIdN7in7mSPDDNL-VioP_ud4qcOPEOaeZ-Mv7NFFGEaSXhMebCLK4AAh50Ci40nNiXD3fYmpL_cZG8SPJCbwK-3Z7marAnhfNJrSe7ZeMhImEMzd4et0rVCTa6xStc-TVrWUeoiYwGft56C92S4wd8geTBECrcAJ-0-s_WcLUaZ6cG"/>
+</div>
+<div>
+<p class="font-bold">Nguyễn Minh Đức</p>
+<p class="text-xs text-white/40">Học viên khóa B2 - T10/2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form -->
+<section class="py-16 md:py-24 bg-surface relative" id="registration-form">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-2/5 red-gradient p-8 md:p-12 text-white">
+<h3 class="text-3xl font-black mb-6 leading-tight">Sẵn sàng để bắt đầu?</h3>
+<p class="text-white/80 mb-10 leading-relaxed">Điền thông tin và chuyên viên của chúng tôi sẽ liên hệ tư vấn lộ trình học phù hợp nhất cho bạn trong vòng 15 phút.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">call</span>
+<span class="font-bold">1900 68XX</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-bold">tuvan@precision.edu.vn</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-bold">Quận 7, TP. Hồ Chí Minh</span>
+</div>
+</div>
+</div>
+<div class="md:w-3/5 p-8 md:p-12">
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant">Họ và tên</label>
+<input class="w-full bg-surface-container border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant">Số điện thoại</label>
+<input class="w-full bg-surface-container border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="0901 234 XXX" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant">Khóa học quan tâm</label>
+<select class="w-full bg-surface-container border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all appearance-none">
+<option>Hạng B1 - Số tự động</option>
+<option>Hạng B2 - Số sàn</option>
+<option>Hạng C - Xe tải</option>
+<option>Bổ túc tay lái</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant">Lời nhắn</label>
+<textarea class="w-full bg-surface-container border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Bạn cần tư vấn thêm điều gì?" rows="4"></textarea>
+</div>
+<button class="w-full red-gradient text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-[0.98] transition-all" type="submit">
+                            Gửi yêu cầu tư vấn
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full pt-16 md:pt-20 pb-10 bg-zinc-900 text-white font-['Be_Vietnam_Pro']">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mb-16">
+<!-- Column 1: Brand -->
+<div class="lg:col-span-1">
+<div class="text-xl font-black tracking-tighter mb-4">
+        THE PRECISION NAVIGATOR
+      </div>
+<p class="text-zinc-400 text-sm leading-relaxed">
+        Kiến tạo những chuyên gia đường phố với quy trình đào tạo chuẩn quốc tế và cam kết an toàn tuyệt đối.
+      </p>
+</div>
+<!-- Column 2: Về Chúng Tôi -->
+<div>
+<h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Về Chúng Tôi</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Giới thiệu</a></li>
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Đội ngũ</a></li>
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Cơ sở vật chất</a></li>
+</ul>
+</div>
+<!-- Column 3: Khóa Học -->
+<div>
+<h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Khóa Học</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng B1 (Số tự động)</a></li>
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng B2 (Số sàn)</a></li>
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng C (Xe tải)</a></li>
+</ul>
+</div>
+<!-- Column 4: Hỗ Trợ -->
+<div>
+<h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Hỗ Trợ</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Quy trình đào tạo</a></li>
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Chính sách học phí</a></li>
+<li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Câu hỏi thường gặp</a></li>
+</ul>
+</div>
+<!-- Column 5: Liên Hệ -->
+<div>
+<h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Liên Hệ</h4>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span class="text-zinc-400 text-sm">Quận 7, TP. Hồ Chí Minh</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span class="text-zinc-400 text-sm">1900 68XX</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span class="text-zinc-400 text-sm">tuvan@precision.edu.vn</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-zinc-500 text-xs">
+      © 2024 The Precision Navigator. All rights reserved. Mastery in every turn.
+    </div>
+<div class="flex gap-6">
+<a class="text-zinc-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">facebook</span>
+</a>
+<a class="text-zinc-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+<a class="text-zinc-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">music_note</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+  (function () {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+    const closeMenu = () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) icon.textContent = 'menu';
+    };
+    btn.addEventListener('click', function () {
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', !willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) icon.textContent = willOpen ? 'close' : 'menu';
+    });
+    menu.querySelectorAll('a, button').forEach((el) => el.addEventListener('click', closeMenu));
+    window.addEventListener('resize', function () { if (window.innerWidth >= 768) closeMenu(); });
+  })();
+</script>
+</body></html>
+
+
+
+
