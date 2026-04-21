@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="light" lang="vi"><head>
 <meta charset="utf-8"/>
@@ -83,7 +83,50 @@
         .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
         .red-gradient { background: linear-gradient(135deg, #b71511 0%, #db3327 100%); }
         .text-editorial { letter-spacing: -0.02em; }
-    html { scroll-behavior: smooth; }</style>
+        html { scroll-behavior: smooth; }
+
+        /* Nav link active state */
+        .nav-link {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #52525b;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #b71511;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover { color: #b71511; }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link.active {
+            color: #b71511;
+            font-weight: 700;
+        }
+        .nav-link.active::after { width: 100%; }
+
+        /* Mobile nav link */
+        .nav-link-mobile {
+            color: #27272a;
+            font-weight: 600;
+            padding: 6px 0;
+            border-left: 3px solid transparent;
+            padding-left: 10px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .nav-link-mobile.active {
+            color: #b71511;
+            border-left-color: #b71511;
+        }
+    </style>
 </head>
 <body class="bg-surface text-on-surface">
 <!-- Top Navigation Shell -->
@@ -92,7 +135,13 @@
 <a class="text-sm sm:text-base md:text-xl font-black text-zinc-900 dark:text-zinc-50 tracking-tighter leading-tight" href="#">
                 THE PRECISION NAVIGATOR
             </a>
-<div class="hidden md:flex items-center gap-8"><a class="text-[#b71511] font-bold border-b-2 border-[#b71511] pb-1 font-['Be_Vietnam_Pro'] tracking-tight" href="#about">Về chúng tôi</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#courses-section">Khóa học</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#advantages">Ưu điểm</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#process">Quy trình</a><a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#b71511] transition-colors duration-300 font-['Be_Vietnam_Pro'] tracking-tight" href="#testimonials">Cảm nhận</a></div>
+<div class="hidden md:flex items-center gap-8" id="desktop-nav">
+  <a class="nav-link" data-section="about" href="#about">Về chúng tôi</a>
+  <a class="nav-link" data-section="courses-section" href="#courses-section">Khóa học</a>
+  <a class="nav-link" data-section="advantages" href="#advantages">Ưu điểm</a>
+  <a class="nav-link" data-section="process" href="#process">Quy trình</a>
+  <a class="nav-link" data-section="testimonials" href="#testimonials">Cảm nhận</a>
+</div>
 <div class="hidden sm:block">
 <button class="red-gradient text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm md:text-base active:scale-95 transition-transform duration-200 whitespace-nowrap" onclick="window.location.href='#registration-form'">
                 Đăng ký ngay
@@ -104,11 +153,11 @@
 </div>
 <div class="hidden md:hidden border-t border-zinc-200/80 bg-white/95 backdrop-blur" id="mobile-menu">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3">
-<a class="text-zinc-800 font-semibold" href="#about">Về chúng tôi</a>
-<a class="text-zinc-800 font-semibold" href="#courses-section">Khóa học</a>
-<a class="text-zinc-800 font-semibold" href="#advantages">Ưu điểm</a>
-<a class="text-zinc-800 font-semibold" href="#process">Quy trình</a>
-<a class="text-zinc-800 font-semibold" href="#testimonials">Cảm nhận</a>
+<a class="nav-link-mobile" data-section="about" href="#about">Về chúng tôi</a>
+<a class="nav-link-mobile" data-section="courses-section" href="#courses-section">Khóa học</a>
+<a class="nav-link-mobile" data-section="advantages" href="#advantages">Ưu điểm</a>
+<a class="nav-link-mobile" data-section="process" href="#process">Quy trình</a>
+<a class="nav-link-mobile" data-section="testimonials" href="#testimonials">Cảm nhận</a>
 <button class="red-gradient text-white px-5 py-2.5 rounded-full font-bold w-full mt-1" onclick="window.location.href='#registration-form'" type="button">Đăng ký ngay</button>
 </div>
 </div>
@@ -567,24 +616,78 @@
 </footer>
 <script>
   (function () {
+    /* ===== Mobile Menu Toggle ===== */
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
-    if (!btn || !menu) return;
-    const closeMenu = () => {
-      menu.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
-      const icon = btn.querySelector('.material-symbols-outlined');
-      if (icon) icon.textContent = 'menu';
+    if (btn && menu) {
+      const closeMenu = () => {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = 'menu';
+      };
+      btn.addEventListener('click', function () {
+        const willOpen = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', !willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = willOpen ? 'close' : 'menu';
+      });
+      menu.querySelectorAll('a, button').forEach((el) => el.addEventListener('click', closeMenu));
+      window.addEventListener('resize', function () { if (window.innerWidth >= 768) closeMenu(); });
+    }
+
+    /* ===== Active Nav Link on Scroll (IntersectionObserver) ===== */
+    const sectionIds = ['about', 'courses-section', 'advantages', 'process', 'testimonials'];
+    const desktopLinks = document.querySelectorAll('#desktop-nav .nav-link');
+    const mobileLinks  = document.querySelectorAll('#mobile-menu .nav-link-mobile');
+
+    function setActive(sectionId) {
+      desktopLinks.forEach(function(link) {
+        if (link.dataset.section === sectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      mobileLinks.forEach(function(link) {
+        if (link.dataset.section === sectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    /* Dùng IntersectionObserver để theo dõi section nào đang hiển thị */
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -60% 0px', /* trigger khi section ở khoảng giữa màn hình */
+      threshold: 0
     };
-    btn.addEventListener('click', function () {
-      const willOpen = menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', !willOpen);
-      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      const icon = btn.querySelector('.material-symbols-outlined');
-      if (icon) icon.textContent = willOpen ? 'close' : 'menu';
+
+    let currentActive = null;
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          currentActive = entry.target.id;
+          setActive(currentActive);
+        }
+      });
+    }, observerOptions);
+
+    sectionIds.forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
     });
-    menu.querySelectorAll('a, button').forEach((el) => el.addEventListener('click', closeMenu));
-    window.addEventListener('resize', function () { if (window.innerWidth >= 768) closeMenu(); });
+
+    /* Click lên nav link cũng set active ngay lập tức (không chờ scroll) */
+    function handleNavClick(e) {
+      const section = this.dataset.section;
+      if (section) setActive(section);
+    }
+    desktopLinks.forEach(function(link) { link.addEventListener('click', handleNavClick); });
+    mobileLinks.forEach(function(link)  { link.addEventListener('click', handleNavClick); });
   })();
 </script>
 </body></html>
