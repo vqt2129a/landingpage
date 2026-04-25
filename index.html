@@ -656,68 +656,60 @@
   </section>
   <!-- Footer Shell -->
   <footer class="w-full pt-16 md:pt-20 pb-10 bg-zinc-900 text-white font-['Be_Vietnam_Pro']">
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mb-16">
-      <!-- Column 1: Brand -->
-      <div class="lg:col-span-1">
-        <p class="text-zinc-400 text-sm leading-relaxed">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <!-- Brand: full width trên mobile -->
+      <div class="mb-8 pb-8 border-b border-zinc-800">
+        <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
           Kiến tạo những chuyên gia đường phố với quy trình đào tạo chuẩn quốc tế và cam kết an toàn tuyệt đối.
         </p>
       </div>
-      <!-- Column 2: Về Chúng Tôi -->
-      <div>
-        <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Về Chúng Tôi</h4>
-        <ul class="space-y-4">
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Giới thiệu</a></li>
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Đội ngũ</a></li>
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Cơ sở vật chất</a></li>
-        </ul>
-      </div>
-      <!-- Column 3: Khóa Học -->
-      <div>
-        <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Khóa Học</h4>
-        <ul class="space-y-4">
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng B1 (Số tự động)</a>
-          </li>
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng B2 (Số sàn)</a></li>
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng C (Xe tải)</a></li>
-        </ul>
-      </div>
-      <!-- Column 4: Hỗ Trợ -->
-      <div>
-        <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Hỗ Trợ</h4>
-        <ul class="space-y-4">
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Quy trình đào tạo</a></li>
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Chính sách học phí</a></li>
-          <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Câu hỏi thường gặp</a></li>
-        </ul>
-      </div>
-      <!-- Column 5: Liên Hệ -->
-      <div>
-        <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Liên Hệ</h4>
-        <ul class="space-y-4">
-          <li class="flex gap-3">
-            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
-            <span class="text-zinc-400 text-sm">Quận 7, TP. Hồ Chí Minh</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="material-symbols-outlined text-primary text-lg">call</span>
-            <span class="text-zinc-400 text-sm">1900 68XX</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="material-symbols-outlined text-primary text-lg">mail</span>
-            <span class="text-zinc-400 text-sm">tuvan@precision.edu.vn</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-      <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Bản đồ</h4>
-      <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-lg">
-        <iframe allowfullscreen="" class="w-full h-72 md:h-80" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Qu%E1%BA%ADn+7,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh&output=embed"
-          title="Google Map - Quận 7, TP. Hồ Chí Minh"></iframe>
+      <!-- Links: 2 cột trên mobile, 4 cột trên desktop -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <!-- Về Chúng Tôi -->
+        <div>
+          <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Về Chúng Tôi</h4>
+          <ul class="space-y-3">
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Giới thiệu</a></li>
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Đội ngũ</a></li>
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Cơ sở vật chất</a></li>
+          </ul>
+        </div>
+        <!-- Khóa Học -->
+        <div>
+          <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Khóa Học</h4>
+          <ul class="space-y-3">
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng B1 (Số tự động)</a></li>
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng B2 (Số sàn)</a></li>
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Hạng C (Xe tải)</a></li>
+          </ul>
+        </div>
+        <!-- Hỗ Trợ -->
+        <div>
+          <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Hỗ Trợ</h4>
+          <ul class="space-y-3">
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Quy trình đào tạo</a></li>
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Chính sách học phí</a></li>
+            <li><a class="text-zinc-400 hover:text-primary transition-colors text-sm" href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+        <!-- Liên Hệ -->
+        <div>
+          <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Liên Hệ</h4>
+          <ul class="space-y-3">
+            <li class="flex gap-3 items-start">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">location_on</span>
+              <span class="text-zinc-400 text-sm">Quận 7, TP. Hồ Chí Minh</span>
+            </li>
+            <li class="flex gap-3 items-center">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">call</span>
+              <span class="text-zinc-400 text-sm">1900 68XX</span>
+            </li>
+            <li class="flex gap-3 items-center">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">mail</span>
+              <span class="text-zinc-400 text-sm break-all">tuvan@precision.edu.vn</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- Bottom Bar -->
@@ -726,16 +718,14 @@
       <div class="text-zinc-500 text-xs">
         © 2024 The Precision Navigator. All rights reserved. Mastery in every turn.
       </div>
-      <div class="flex gap-6">
-        <a class="text-zinc-400 hover:text-white transition-colors" href="#">
-          <span class="material-symbols-outlined">facebook</span>
-        </a>
-        <a class="text-zinc-400 hover:text-white transition-colors" href="#">
-          <span class="material-symbols-outlined">video_library</span>
-        </a>
-        <a class="text-zinc-400 hover:text-white transition-colors" href="#">
-          <span class="material-symbols-outlined">music_note</span>
-        </a>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-0">
+      <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Bản đồ</h4>
+      <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-lg">
+        <iframe allowfullscreen="" class="w-full h-72 md:h-80" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Qu%E1%BA%ADn+7,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh&output=embed"
+          title="Google Map - Quận 7, TP. Hồ Chí Minh"></iframe>
       </div>
     </div>
   </footer>
